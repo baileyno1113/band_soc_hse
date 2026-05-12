@@ -1,0 +1,72 @@
+SYSTEM = stepOpt6
+NPAR = 4
+ALGO = Normal  # Fast;Normal
+LREAL = .False.
+LPLANE = .False.
+PREC = Accurate
+#AMIN = 0.01
+#ISYM = -1
+
+##2_INIT_input
+ISTART = 0
+ICHARG  = 12
+
+##3_ELECTRON
+NELM = 200
+NELMIN = 5
+EDIFF = 1e-6
+ISMEAR = 0
+SIGMA = 0.05
+#LMAXMIX = 4
+ENCUT = 325
+#ISPIN =1 
+
+##4_IONS
+NSW = 0
+IBRION = -1
+POTIM = 0.5
+ISIF = 2
+EDIFFG = -0.001
+ADDGRID = .TRUE.
+
+##5_Kmesh
+KSPACING = 0.4
+
+##6_Output
+LWAVE = .True.
+LCHARG = .True.
+LORBIT = 11
+
+####optB86-vdw####
+#GGA = MK
+#PARAM1 = 0.1234
+#PARAM2 = 1.0000
+#LUSE_VDW = .True.
+#AGGAC = 0.0000
+
+#### Add Parameters ####
+#LVHAR = .True.
+
+#### mbj ####
+#METAGGA = MBJ
+#LASPH = .TRUE.
+#LMIXTAU = .TRUE.
+
+#### mix wave####
+#IMIX = 1
+#AMIX = 0.2
+#BMIX = 0.0000001
+
+#### HSE ####
+#LHFCALC = .TRUE.
+#HFSCREEN = 0.2
+
+#### SOC ####
+LSORBIT = .TRUE.
+SAXIS = 0 0 1
+MAGMOM = 1000*0
+GGA_COMPAT = .FALSE.
+#---for slabs---#
+#AMIX = 0.2
+#BMIX = 0.00001
+#LSCALAPACK = .FALSE. 
